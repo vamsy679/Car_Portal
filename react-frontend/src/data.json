@@ -1,0 +1,134 @@
+{
+	"questions": [
+		{	
+			"id": "oil_change",
+			"question_text": "Is your car frequently leaking oil?",
+			"answers": [
+				{"id": "oil_change_yes", "label": "Yes", "score": 5},
+				{"id": "oil_change_no", "label": "No", "score": 0}
+			],
+			"next": [
+				{"answered": "oil_change_yes", "next_question": "air_filter"},
+				{"answered": "oil_change_no", "next_question": "car_type"}
+			]
+		},
+		{	
+			"id": "air_filter",
+			"question_text": "Do you live in a dusty area, or notice poor engine performance, lack of power, reduced gas mileage?",
+			"answers": [
+				{"id": "air_filter_yes", "label": "Yes", "score": 5},
+				{"id": "air_filter_no", "label": "No", "score": 0}
+			],
+			"next": [
+				{"next_question": "car_type"}
+			]
+		},
+		{	
+			"id": "car_type",
+			"question_text": "What kind of car do you drive?",
+			"answers": [
+				{"id": "car_type_Diesel/Petrol", "label": "Diesel/Petrol", "score": 0},
+				{"id": "car_type_Electric", "label": "Electric", "score": 0}
+			],
+			"next": [
+				{"next_question": "last_service"}
+			]
+		},
+		{
+			"id": "last_service",
+			"question_text": "When was you car last serviced?",
+			"answers": [
+				{"id": "last_service_Before 12 months", "label": "Before 12 months", "score": 0},
+				{"id": "heartburn_weekly_Before 24 months", "label": "Before 24 months", "score": 5}
+			],
+			"next": [
+				{"next_question": "driven_miles"}
+			]
+		},
+		{
+			"id": "driven_miles",
+			"question_text": "How many miles were driven totally?",
+			"answers": [
+				{"id": "driven_miles_Under 6000", "label": "Under 6,000", "score": 0},
+				{"id": "driven_miles_Over 12,000", "label": "Over 12,000", "score": 5}
+			],
+			"next": [
+				{"next_question": "steering_wheel"}
+			]
+		},
+		{
+			"id": "steering_wheel",
+			"question_text": "Is the steering wheel stiff to use?",
+			"answers": [
+				{"id": "steering_wheel_Yes", "label": "Yes", "score": 5},
+				{"id": "steering_wheel_No", "label": "No", "score": 0}
+			],
+			"next": [
+				{"next_question": "car_body"}
+			]
+		},
+		{
+			"id": "car_body",
+			"question_text": "What kind of body does your car have?",
+			"answers": [
+				{"id": "car_body_Sedan", "label": "Sedan", "score": 0},
+				{"id": "car_body_SUV", "label": "SUV", "score": 0}
+			],
+			"next": [
+				{"next_question": "battery_problem"}
+			]
+		},
+		{
+			"id": "battery_problem",
+			"question_text": "Does your car have any starting problems?",
+			"answers": [
+				{"id": "battery_problem_Yes", "label": "Yes", "score": 5},
+				{"id": "battery_problem_No", "label": "No", "score": 0}
+			],
+			"next": [
+				{"next_question": "indicator_work"}
+			]
+		},
+		{
+			"id": "indicator_work",
+			"question_text": "Do all the car indicators on the dashboard work properly?",
+			"answers": [
+				{"id": "indicator_work_Yes", "label": "Yes", "score": 0},
+				{"id": "indicator_work_No", "label": "No", "score": 5}
+			],
+			"next": [
+				{"next_question": "noises_make"}
+			]
+		},
+		{
+			"id": "noises_make",
+			"question_text": "Does your car engine make any unusual noises?",	
+			"answers": [
+				{"id": "noises_make_yes", "label": "Yes", "score": 5},
+				{"id": "noises_make_no", "label": "No", "score": 0}
+			],
+			"next": [
+				{"max_score": 5, "outcome": "Level_1"},
+				{"max_score": 20, "outcome": "Level_2"},
+				{"outcome": "Level_3"}
+			]
+		}
+	],
+	"outcomes": [
+		{
+			"id": "Level_3",
+			"text": "You are advised for a Major Service, which is most comprehensive car service, including changing parts recommended for replacement, brake fluid and the cabin filter. You should receive an on-car fuel injector flush, throttle body clean, engine decarbonisation and fuel tank additive.",
+			"show_booking_button": false
+		},
+		{
+			"id": "Level_1",
+			"text": "You are advised for a Safety Inspection, A safety service involves inspecting your engine oil, checking under your bonnet, topping up fluids, inspecting belts and hoses and testing the battery. You should also get a vehicle safety inspection, handbrake adjustment, charging system check and cooling system check.",
+			"show_booking_button": true
+		},
+		{
+			"id": "Level_2",
+			"text": "You are advised for an Intermediate service, which includes top to bottom inspection. It should resolve existing problems, which includes checking the engine management system, a diagnostic scan and fault code analysis, replacement of the air filter, coolant, brake fluid, replacement of the external fuel filter and non-platinum spark plugs.",
+			"show_booking_button": false
+		}
+	]
+}
