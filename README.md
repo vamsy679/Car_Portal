@@ -1,6 +1,4 @@
-# TDDD27_2022_gonve175
-
-**Advanced Web Programming (TDDD27) Project by _LiuID-(gonve175_)**
+**Advanced Web Programming (TDDD27) by Vamsy GVS**
 
 **Project Name:   _CarPortal_**
 
