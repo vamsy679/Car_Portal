@@ -1,6 +1,6 @@
-**Advanced Web Programming (TDDD27) by Vamsy GVS**
+**Advanced Web Programming (Carportal) by Vamsy GVS**
 
-**Project Name:   _CarPortal_**
+
 
 **Description** 
 
